@@ -1,0 +1,103 @@
+#def say_goodnight(name)
+#result = "Good night, #{name}"
+# return result
+#end
+#puts say_goodnight('Pa')
+
+#4.upto(6) {|x| print x}
+
+#ZERO = 0.0
+#puts ZERO.finite?
+#puts ZERO
+
+#planet = "a"
+#planet_n = 2
+
+#puts "Hello" + " " + planet
+#puts "hello planet ##{planet_n}"
+
+nome = "Marika"
+cognome = "Pinori"
+#print nome
+#print cognome + "\n"
+#puts nome
+#puts cognome
+
+#puts "Io mi chiamo" + " " + nome + " " + cognome
+#puts 'Io mi chiamo' + ' ' + nome + ' ' + cognome
+
+stringa = "Io mi chiamo"
+stringa << " " << nome << " " << cognome
+#puts stringa
+
+#puts "Io mi chiamo" << " " << nome << " " << cognome
+
+puts "Io mi chiamo #{nome} #{cognome}"
+puts 'Io mi chiamo #{nome} #{cognome}'
+
+nome2 = ""
+if (nome != "")
+  puts nome
+end
+puts nome if (nome2 != "")
+
+puts "Ciao mondo".split
+puts "Ciao_mondo".split("_")
+
+vett=[15, 30, 90, 22, 70]
+#puts vett
+#print vett
+
+#vett.each { |x| print x}
+#vett.each { |x| print x, ' '}
+
+#puts vett.first
+#puts vett
+#vett.sort!
+#puts vett
+
+a = (0..9)
+b = (0..9).to_a
+#print a
+#print b
+
+c = ("a".."d")
+d = ("a".."d").to_a
+
+#puts c
+#puts d
+
+#3.times { puts "ciao"}
+
+animals = %w{cat dog horse}
+#animals.each { |anim| puts anim}
+#print animals
+
+#(1..5).each {|i| puts 2*i}
+
+puts ('a'..'z').to_a.shuffle[0..7].join
+puts " "
+my_str = "blah, blah"
+puts my_str.split(",")[0].split("")[2] * 3
+#s = "hello"
+#puts s[0]
+#s[0,1] = "H"
+#puts s
+#s[s.length,0] = "world"
+#s[5,0] = ", "
+#puts s
+
+#puts "This is it".split
+
+#r= 'a'..'c'
+#r.each { |l| print "[#{l}]"}
+#puts r.to_a
+
+#num = Hash.new
+#num['one'] = 1
+#num['two'] = 2
+
+#print num
+
+#sum = num['one'] + num['two']
+#print sum

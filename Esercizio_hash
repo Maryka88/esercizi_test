@@ -1,0 +1,36 @@
+elementi = {
+    :H => "idrogeno",
+    :O => "ossigeno",
+    :Na => "sodio",
+    :Cl => "cloro",
+    :He => "elio",
+    :K => "potassio",
+    :C => "carbonio",
+    :Ca => "calcio",
+    :Fl => "fluoro",
+    :Zn => "zinco",
+    :N => "azoto"
+}
+
+print elementi
+puts " "
+puts elementi
+
+elementi.each do |simb, nome|
+  puts "L'elemento #{nome} ha come simbolo #{simb}."
+end
+
+puts "Nella tabella ci sono #{elementi.length} elementi."
+
+puts elementi.include? :H
+puts elementi.has_key? :O
+puts elementi.has_value? "ossigeno"
+
+pattern = /(?i)o/
+pattern2 = /O/
+formula = "H2O"
+
+puts pattern
+puts pattern2
+puts formula =~ pattern
+puts formula =~ pattern2

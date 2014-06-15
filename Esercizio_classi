@@ -1,0 +1,65 @@
+class TodoItem
+  attr_accessor :name, :done
+  alias_method :done?, :done
+
+  def initialize(name)
+    @name = name
+    @done = false
+  end
+
+  def toggle
+    @done = !@done
+  end
+
+  def to_s
+    "Item: #@name Fatto: #@done"
+  end
+end
+
+uno = TodoItem.new("Fare la spesa")
+due = TodoItem.new("Comprare il latte")
+
+puts uno.done?
+uno.toggle
+puts uno.done?
+
+puts uno.to_s
+
+uno.done = true
+puts uno.done?
+
+puts " "
+
+class TodoList
+  def initialize
+    @list = []
+  end
+  def add(item)
+    @list << item
+  end
+  def remove(item)
+    @list.delete(item)
+  end
+  def each
+    @list.each { |p| yield p}
+  end
+  def [](id)
+    @list[id]
+  end
+  def length
+    @list.length
+  end
+end
+
+lista = TodoList.new
+lista.add("uno")
+lista.add("due")
+
+lista.each {|item| puts item.to_s}
+puts lista[0]
+#lista.remove("due")
+
+puts "Nella mia lista ci sono #{lista.length} elementi. Eccoli:"
+lista.each {|item| puts item.to_s}
+
+#puts uno

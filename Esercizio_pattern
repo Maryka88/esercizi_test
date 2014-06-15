@@ -1,0 +1,58 @@
+pattern_targa = /[A-Z]{2}[0-9]{3}[A-Z]{2}/
+targa = "AK335RE"
+targa2 = "TOR22035"
+targa3 = "TO44564E"
+targa4 = "to44564E"
+frase_targa = "La mia targa e' AK335RE"
+
+puts pattern_targa
+puts targa
+puts targa =~ pattern_targa
+puts frase_targa =~ pattern_targa
+
+pattern_targa2 = /^[A-Z]{2}[0-9]{3}[A-Z]{2}|^[A-Z]{3}[0-9]{5}|^[A-Z]{2}[0-9]{5}[A-Z]/
+
+puts targa =~ pattern_targa2
+puts targa2 =~ pattern_targa2
+puts targa3 =~ pattern_targa2
+puts targa4 =~ pattern_targa2
+
+cod_fisc1 = "PNRMRK88D47H501Z"
+cod_fisc2 = "GRFNDR78A16K221F"
+patt_cod_fisc = /^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]/
+
+puts cod_fisc1 =~ patt_cod_fisc
+puts cod_fisc2 =~ patt_cod_fisc
+
+frase3= "Il mio codice fiscale e' GRFNDR78A16K221F "
+patt_cod_fisc2 = /[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]/
+puts frase3 =~ patt_cod_fisc2
+codice = $~.to_s
+puts codice
+
+check1 = cod_fisc1[9]
+check2 = cod_fisc2[9]
+
+print "Il mio codice fiscale e' #{cod_fisc1} e sono "
+puts "una donna" if (check1 >= "4")
+puts "un uomo" if (check1 < "4")
+
+print "Il mio codice fiscale e' #{cod_fisc2} e sono "
+puts "una donna" if (check2 >= "4")
+puts "un uomo" if (check2 < "4")
+
+patt_viagra = /v[i1!][a@]gr[a@]/
+frase_v1 = "Vuoi comprare del viagra?"
+frase_v2 = "Vuoi comprare del v1@gra?"
+frase_v3 = "Vuoi comprare del v1agra?"
+frase_v4 = "Vuoi comprare del v!@gr@?"
+
+puts "Hai scritto viagra!" if frase_v1 =~ patt_viagra
+puts "Hai scritto viagra!" if frase_v2 =~ patt_viagra
+puts "Hai scritto viagra!" if frase_v3 =~ patt_viagra
+puts "Hai scritto viagra!" if frase_v4 =~ patt_viagra
+
+patt_ip = /192\.168\.1\.\d{1,3}/
+ip = "192.168.1.9"
+
+puts ip =~ patt_ip
